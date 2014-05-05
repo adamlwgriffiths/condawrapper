@@ -22,19 +22,32 @@ Download the script and add it to your .bashrc file.
 Example
 =======
 
-::
+Creating (defaults to 'python=2.7 pip')::
 
-    mkconda my_env
+    $ mkconda my_env
 
-    mkconda my_other_env python=3.3 pip numpy=1.6
 
-    lsconda
+Creating using specific packages::
 
-    useconda my_env
+    $ mkconda my_other_env python=3.3* pip numpy=1.8
 
-    unuseconda
 
-    rmconda my_env
+Activating and deactivating::
+
+    $ useconda my_env
+    $ unuseconda
+
+
+Listing::
+
+    $ lsconda
+    my_env
+    my_other_env
+
+
+Deleting::
+
+    $ rmconda my_env
 
 
 Authors
