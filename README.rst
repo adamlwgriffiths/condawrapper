@@ -1,6 +1,6 @@
-=========
-CondaVenv
-=========
+============
+CondaWrapper
+============
 
 `virtualenvwrapper <https://bitbucket.org/dhellmann/virtualenvwrapper>`_-like
 commands for `conda <http://conda.pydata.org/docs/>`_.
@@ -16,7 +16,7 @@ Download the script and add it to your .bashrc file.
 
 ::
 
-    source /path/to/script/condavenv.sh
+    source /path/to/script/condawrapper.sh
 
 
 Example
@@ -53,6 +53,6 @@ Deleting::
 Authors
 =======
 
-CondaVenv was created by Adam Griffiths (@adamlwgriffiths).
+CondaWrapper was created by Adam Griffiths (@adamlwgriffiths).
 
 
