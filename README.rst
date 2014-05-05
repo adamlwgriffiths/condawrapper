@@ -40,6 +40,6 @@ Example
 Authors
 =======
 
-CondaEnv was created by Adam Griffiths (@adamlwgriffiths).
+CondaVenv was created by Adam Griffiths (@adamlwgriffiths).
 
 
