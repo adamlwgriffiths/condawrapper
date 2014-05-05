@@ -29,7 +29,7 @@ Creating (defaults to 'python=2.7 pip')::
 
 Creating using specific packages::
 
-    $ mkconda my_other_env python=3.3* pip numpy=1.8
+    $ mkconda my_other_env python=3.3 pip numpy=1.8
 
 
 Activating and deactivating::
