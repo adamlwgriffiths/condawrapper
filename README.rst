@@ -2,8 +2,8 @@
 CondaVenv
 =========
 
-`virtualenvwrapper<https://bitbucket.org/dhellmann/virtualenvwrapper>`_-like
-commands for `conda<http://conda.pydata.org/docs/>`_.
+`virtualenvwrapper <https://bitbucket.org/dhellmann/virtualenvwrapper>`_-like
+commands for `conda <http://conda.pydata.org/docs/>`_.
 
 Unlike virtualenvwrapper, conda's environments are not tired to directories, so
 you can easily switch between testing environment's without making new copies
