@@ -53,6 +53,6 @@ Deleting::
 Authors
 =======
 
-CondaWrapper was created by Adam Griffiths (@adamlwgriffiths).
+* `Adam Griffiths <https://github.com/adamlwgriffiths>`_
 
 
