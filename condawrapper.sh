@@ -59,10 +59,7 @@ function mkconda()
     fi
     name="$1"
     shift
-    packages=
-    if [ $# -eq 0 ] ; then
-        packages="python pip"
-    fi
+    packages="python pip"
     conda create -n $name $packages $*
 }
 
