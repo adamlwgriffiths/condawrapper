@@ -117,7 +117,7 @@ function unuseconda()
     # check for bad arguments or help
     min_args=0
     if [ $# -lt $min_args ] || [[ $1 =~ ^(-h|--help)$ ]] ; then
-        echo -e "usage: unuseconda [-h] name"
+        echo -e "usage: unuseconda [-h]"
         echo
         echo -e "Deactivates an active conda environment."
         echo
@@ -145,8 +145,7 @@ function lsconda()
         return 1
     fi
     # envs directories : /<home dir>/anaconda/envs
-    dir=$(condaenvs)
-    echo `ls $dir`
+    conda info --envs
 }
 
 function rmconda()
@@ -154,7 +153,7 @@ function rmconda()
     # check for bad arguments or help
     min_args=1
     if [ $# -lt $min_args ] || [[ $1 =~ ^(-h|--help)$ ]] ; then
-        echo -e "usage: rmconda [-h]"
+        echo -e "usage: rmconda [-h] env"
         echo
         echo -e "Deletes a conda environment."
         echo
@@ -164,30 +163,8 @@ function rmconda()
     fi
     name="$1"
     shift
-    # add to the env directory and normalize the path
-    dir=$(condaenvs)
-    path="$dir/$name"
-    path=$(resolve_dir "$path")
 
-    # check the path exists
-    if [ -d $path ] ; then
-        # check if the environment is active
-        # TODO:
-
-        # confirm we can delete
-        msg="Are you sure you wish to delete $path?"
-        # newsflash: bash considered harmful (for your sanity)
-        confirm $msg
-        result=$?
-        if [ $result -eq $SUCCESS ] ; then
-            rm -rf "$path"
-        fi
-    else
-        # env doesnt exist, list the available envs
-        echo "No such virtual environment '$name'"
-        echo "Valid environments are:"
-        lsconda
-    fi
+    conda remove --name $name --all
 }
 
 export mkconda
